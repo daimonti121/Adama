@@ -1,0 +1,494 @@
+@import "_media"
+@import "_mixins"
+
+.body 
+    background:  url('../img/background.png') 
+    background-blend-mode: color-dodge
+    background-color: #752157
+    background-size: cover 
+    background-attachment: fixed    
+    margin: 0
+    padding: 0
+    max-width: 100%
+    max-height: 100%     
+    font-family: 'Heebo', sans-serif
+    position: relative
+    z-index: 100 
+.header 
+    &__logo        
+        position: fixed
+        left: 40px
+        top: 40px
+        z-index: 20        
+.title-block  
+    .container
+        max-width: 1902px
+        margin: 0 auto
+    .title-block--inner
+        display: flex
+    .title-image
+        max-width: 814px
+        &__img
+            max-width: 100%
+            position: relative
+            left: 20px
+    .title-top
+        margin-top: 26px
+        margin-right: -3px
+        width: 674px
+        text-align: center
+        padding-left: 40px
+        &__h2
+            font-size: 135px
+            line-height: 120px
+            color: #FFFFFF
+            &::after
+                content: ""
+                background-color: #fff
+                width: 100%
+                height: 4px
+                display: block
+                position: relative
+                top: 30px
+        &__h4
+            font-size: 55px
+            line-height: 55px
+            color: #FFFFFF
+            margin-top: -55px
+            font-weight: normal
+        &__h5
+            font-size: 30px
+            line-height: 34px
+            color: #FFFFFF
+            font-weight: normal
+            position: relative
+            top: 42px
+            &::after
+                content: url('../img/arrowDown.png')                 
+                display: block
+                margin-top: 24px
+        .title-body
+            margin-top: 175px
+            margin-right: 140px
+            width: 551px            
+            &__h3            
+                font-size: 60px
+                color: #fff
+                line-height: 68px
+                text-align: right                
+            &__h6
+                color: #fff
+                font-weight: 400
+                line-height: 25px
+                font-size: 20px
+                margin-top: 19px
+                text-align: right
+                width: 541px
+                margin-left: 11px
+            &__p
+                font-size: 30px
+                font-weight: 700
+                color: #fff
+                text-align: right
+                margin-top: 67px
+                position: relative
+                &::after
+                    content: url('../img/flower-after.png') 
+                    position: absolute
+                    right: -56px
+                    top: 6px
+            &__row
+                display: flex
+                margin-top: 22px
+            &__block
+                width: 126px
+                height: 120px
+                background: rgba(0, 152, 69, 0.7)
+                border: 2px solid #fff
+                border-radius: 50%  
+                margin-left: 16px             
+            &__icon
+                margin-top: 15px
+            &__text
+                color: #fff
+                font-size: 16px   
+                opacity: .7   
+            &__text--opacity
+                opacity: 1           
+            &__block--opacity
+                background: rgba(0, 152, 69, 1)
+.container-medium
+    max-width: 1446px
+    margin: 0 auto
+.slider
+    position: relative
+    z-index: 40
+    margin-top: 164px
+    &__title
+        text-align: center
+        font-size: 60px
+        color: #fff
+        line-height: 68px
+        position: relative
+        top: 24px
+        left: 4px
+    &__box        
+        margin-top: 70px           
+    .slick-slider .slick-track, .slick-slider .slick-list 
+        display: flex
+        justify-content: space-between  
+    &__item
+        width: 242px !important            
+        margin-left: 22px !important    
+    .slick-next:before 
+        content: url('../img/slider-next.png')
+        display: block !important
+        width: 56px
+        height: auto
+        position: relative
+        right: 25px
+        bottom: -25px
+    .slick-prev:before
+        display: block  !important
+        content: url('../img/slider-prew.png')
+        width: 56px
+        height: auto
+        position: relative
+        left: 83px
+        bottom: -25px
+    .slider__item
+        margin-left: 0px
+        // slider__item slick-slide slick-active
+    &__image
+        position: relative
+        left: calc(50% - 146px)
+    &__title-item, &__title-item-1, &__title-item-2, &__title-item-3, &__title-item-4
+        left: -2px
+        top: 1px
+    &__title-item
+        @include title-item
+    &__title-item-1
+        @include title-item
+    &__title-item-2   
+        @include title-item
+    &__title-item-3
+        @include title-item
+    &__title-item-4
+        @include title-item
+    &__title-item.active        
+        @include title-itemActive
+    &__title-item-1.active  
+        @include title-itemActive
+    &__title-item-2.active  
+        @include title-itemActive
+    &__title-item-3.active  
+        @include title-itemActive
+    &__title-item-4.active  
+        @include title-itemActive
+    &__item-block
+        display: flex
+        margin-top: 4px
+        position: relative
+    &__tem__tab, &__tem__tab-1, &__tem__tab-2, &__tem__tab-3, &__tem__tab-4, &__tem__tab-5
+        position: relative
+        top: -2px
+        left: 3px
+    &__tem__tab
+        @include tem-tab
+    &__tem__tab-1
+        @include tem-tab
+    &__tem__tab-2
+        @include tem-tab
+    &__tem__tab-3
+        @include tem-tab
+    &__tem__tab-4
+        @include tem-tab
+    &__tem__tab.active
+        @include tem-tabActive 
+    &__tem__tab-1.active
+        @include tem-tabActive
+    &__tem__tab-2.active
+        @include tem-tabActive
+    &__tem__tab-3.active
+        @include tem-tabActive
+    &__tem__tab-4.active
+        @include tem-tabActive
+    &__item__text
+        font-size: 16px
+        line-height: 18px
+        color: #fff
+        margin: -3px 0px 0 0px
+    &__button
+        width: 208px
+        height: 46px
+        margin-top: 7px
+        position: relative
+        cursor: pointer        
+        outline: none
+        border: none
+        background: url('../img/button.png') no-repeat transparent
+    &__button span
+        font-size: 18px
+        line-height: 21px
+        color: #fff
+        position: relative
+        left: 15px
+    &__button img
+        position: absolute
+        top: 3px
+        left: 3px
+        transition: .5s
+    &__button:hover img
+        transform: scale(1.17)
+    &__tab-container
+        @include tab-container
+    &__tab-container-1
+        @include tab-container
+    &__tab-container-2
+        @include tab-container
+    &__tab-container-3
+        @include tab-container
+    &__tab-container-4
+        @include tab-container
+    &__tab-container.active
+        @include tab-containerActive
+    &__tab-container-1.active
+        @include tab-containerActive
+    &__tab-container-2.active
+        @include tab-containerActive
+    &__tab-container-3.active
+        @include tab-containerActive
+    &__tab-container-4.active
+        @include tab-containerActive
+    &__ul
+        padding: 0
+        margin: 0
+        list-style: none
+    &__li
+        padding: 0
+        margin: 0
+    &__link
+        padding: 0
+        margin: 0 32px 0 0
+        text-decoration: none
+        color: #fff
+    &__link--title        
+        padding: 0
+        margin: 0 8px 0 0
+        font-size: 23px
+        font-weight: bold
+        color: #752157
+    &__li--background
+        background-color: #752157
+    .slick-dots
+        display: none !important
+.footer
+    margin-top: 106px
+.container-bottom   
+    max-width: 1670px
+    height: 180px
+    margin: 0 auto
+    .menu-inner
+        width: 100%
+        height: 200px
+        position: relative
+        z-index: 40
+        background: url('../img/bottom.png')  
+        filter: drop-shadow(0px -6px 20px rgba(0, 0, 0, 0.161)) 
+    .menu-box
+        display: flex 
+        width: 89%
+        position: relative
+        top: 60px
+        margin: 0 auto
+        &_description
+            width: 35%
+        &__description-h2
+            font-style: normal
+            font-weight: bold
+            font-size: 30px
+            line-height: 44px
+            color: #FFFFFF
+            margin-left: 39px
+            margin-top: 6px
+        &__description-h4        
+            font-style: normal
+            font-weight: normal
+            font-size: 22px
+            line-height: 32px
+            color: #FFFFFF
+            position: relative
+            top: -7px
+            left: -0px
+        &__description-h6
+            font-style: normal
+            font-weight: normal
+            font-size: 16px
+            line-height: 23px
+            color: #FFFFFF
+            margin-top: 8px
+            top: 2px
+            left: -0px
+            position: relative
+            cursor: pointer
+            &::before
+                content: url('../img/download.png')
+                position: absolute
+                right: 94px
+                cursor: pointer
+                transition: .1s all
+            &:hover::before
+                transform: scale(1.1)                
+        &__buttons
+            width: 62%
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap  
+        &__button
+            cursor: pointer
+            position: relative   
+        &__button--simple
+            @include fotterButton
+        &__button:nth-child(n+4)
+            position: relative
+            left: -27px
+        &__button--simple:nth-child(5)
+            left: 58px
+        &__button--simple:nth-child(2)
+            left: -1px
+        &__button--simple:nth-child(3)
+            left: 2px
+            background: url('../img/Path95.png') 50% 50% no-repeat transparent
+        &__button img
+            position: absolute
+            left: 4px
+            top: 3px
+            transition: .5s all        
+        &__button:hover img 
+            transform: scale(1.14)
+            transition: .7s 
+        &__button-link
+            position: absolute
+            left: 0px
+            top: 0px 
+            width: 303px   
+            height: 0px             
+            text-align: center
+            background: url('../img/yellowBig2.png') no-repeat
+            text-decoration: none 
+            transition: .9s ease-in 
+        &__button:focus .menu-box__button-link
+            transition: .5s ease-in            
+            transform:matrix(1.00,0.00,0.00,1.00,-50,50)
+            height: 46px                                  
+        &__button-link span
+            color: #FFFFFF
+            font-size: 16px
+            line-height: 23px
+            position: relative
+            top: 8px
+            opacity: 0  
+            display: none 
+        &__link-span
+            font-size: 18px
+            line-height: 26px
+            margin-top: 3px
+        &__button:focus .menu-box__button-link span
+            opacity: 1  
+            display: block
+        &__button-link--flex
+            display: flex
+            justify-content: center
+        &__left
+            margin-top: 3px
+            padding-left: 5px
+            font-family: Heebo
+            margin-left: 10px
+            line-height: 26px
+            font-style: 18px            
+            &:hover
+                color: #009845
+            &:focus
+                color: #009845              
+        &__right
+            margin-top: 3px
+            font-style: 18px
+            font-family: Heebo
+            padding-right: 20px  
+            margin-left: 20px
+            line-height: 26px
+            border-right: 1px solid #fff  
+            height: 30px
+            &:hover
+                color: #009845
+            &:focus
+                color: #009845
+        &__checkbox
+            position: relative
+        &__button-radio
+            appearance: none
+            position: absolute
+        &__label
+            font-size: 16px
+            line-height: 26px
+            color: #fff  
+            position: relative
+            left: 96px
+            top: 13px
+            cursor: pointer
+        &__label::before
+            content: ''
+            width: 15px
+            height: 15px
+            position: absolute
+            border: 1px solid #fff
+            right: -25px 
+            top: 3px
+            display: block
+            z-index: 1
+        &__label::after
+            content: url('../img/bord.png')
+            width: 16px
+            height: 16px
+            display: block
+            position: absolute
+            left: 152px
+            top: -2px
+            opacity: 0
+            z-index: 2               
+        .menu-box__checkbox input:checked + .menu-box__label::after
+            opacity: 1
+        
+.scroll
+    @include scroll
+.scroll-2
+    @include scroll
+    z-index: 40  
+.anchor__block
+    position: fixed
+    bottom: 0px
+    z-index: 33    
+    background: url('../img/Контур 98.png')
+    width: 434px
+    height: 123px
+    right: 120px
+    filter: drop-shadow(0px -6px 20px rgba(0, 0, 0, 0.161))    
+    cursor: pointer
+    &::after
+        content: url('../img/link-aroow.png')
+        position: absolute
+        top: 65px
+        right: 266px
+        transition: .5s
+    &:hover:after
+        right: 278px
+.anchor__link
+    position: absolute
+    top: 54px
+    width: 140px
+    right: 94px
+    color: #fff
+    text-decoration: none
+    font-size: 22px
+    line-height: 27px
+    font-weight: bold

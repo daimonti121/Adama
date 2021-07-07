@@ -1,0 +1,66 @@
+@mixin title-item
+    font-size: 22px
+    font-weight: bold
+    line-height: 34px
+    margin-top: 20px
+    color: #fff
+    position: relative
+    z-index: 20
+    transition: .3s 
+    transform: translateY(0px)
+@mixin title-itemActive
+    z-index: 20
+    transform: translateY(-287px)
+    left: -12px
+    top: 4px
+@mixin tem-tab
+    width: 17px
+    height: 17px
+    padding-left: 7px
+    cursor: pointer
+    position: relative
+    z-index: 20
+    transition: .3s all
+    transform: translateY(0px)
+@mixin tem-tabActive
+    position: absolute
+    transition: .3s all
+    z-index: 20
+    transform: translateY(-287px)
+    right: 7px  
+@mixin tab-container
+    position: absolute
+    background-color: rgba(117, 33, 87, .9)
+    top: -324px
+    width: 100%
+    height: 0%
+    transition: .3s all
+    transform: translateY(324px)
+    opacity: 0
+@mixin tab-containerActive
+    height: auto
+    transition: .3s all
+    opacity: 1    
+    transform: translateY(0px) 
+@mixin fotterButton
+    width: 303px
+    height: 46px
+    outline: none
+    border: none
+    background: url('../img/footerButton.png') 50% 50% no-repeat transparent
+    font-size: 18px
+    line-height: 26px
+    color: #FFFFFF
+    top: 3px
+    left: -4px
+@mixin scroll
+    width: 1920px
+    height: 200px    
+    opacity: 0.7
+    position: fixed
+    bottom: 0px
+    z-index: -10  
+    filter: drop-shadow(0px 30px 65px #000000)
+    background: linear-gradient(180deg, rgba(117, 33, 87, 0) 0%, rgba(117, 33, 87, 0) 28.9%, #752157 100%)
+    background-blend-mode: multiply
+    mix-blend-mode: multiply
